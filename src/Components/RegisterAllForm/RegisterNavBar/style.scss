@@ -1,0 +1,50 @@
+.reg-nav {
+  height: 50px;
+  width: 100%;
+  transition: all ease 300ms;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 0 30px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  div {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  #reg-nav1 {
+    height: 100%;
+    border-radius: 0 40px 40px 0;
+  }
+}
+.reg-nav-1 {
+  background: rgba(217, 217, 217, 1);
+  &:hover {
+    background-color: rgb(194, 194, 194);
+  }
+  #reg-nav1 {
+    background: rgba(15, 157, 88, 1);
+    color: white;
+    font-weight: 500;
+    &:hover {
+      background: rgb(18, 135, 78);
+    }
+  }
+}
+
+.reg-nav-2 {
+  background-color: rgba(15, 157, 88, 1);
+  color: white;
+  font-weight: 500;
+  &:hover {
+    background-color: rgb(13, 129, 73);
+  }
+  #reg-nav1 {
+    background: rgba(92, 192, 145, 1);
+    color: white;
+    &:hover {
+      background: rgb(77, 161, 122);
+    }
+  }
+}

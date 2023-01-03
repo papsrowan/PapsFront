@@ -1,0 +1,1 @@
+this the componnent which contains bouttons for changing language on top right corner on every register form

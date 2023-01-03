@@ -1,0 +1,14 @@
+@import '../../Utils/sass/Variables.scss';
+
+
+.register-all{
+    @extend %centred;
+    width: 100%;
+    height: 100vh;
+    background: $linearRegister;
+    
+}
+
+// .register-all-container{
+
+// }

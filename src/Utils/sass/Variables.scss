@@ -1,0 +1,17 @@
+// backgrounds Linears
+
+$linearRegister : linear-gradient(112.68deg, #90DEBA 0%, #5CC091 74.44%);
+$registerAllRadius : 20px;
+
+%centred {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// fonts
+@font-face {
+    font-family: 'Poppins';
+    src: url(../../Fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+}

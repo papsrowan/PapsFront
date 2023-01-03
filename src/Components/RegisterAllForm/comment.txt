@@ -1,0 +1,1 @@
+this is the componnent where are all inputs of the vie registerAll
