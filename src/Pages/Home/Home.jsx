@@ -8,7 +8,88 @@ import CircleIconNum from './CircleIconNum/CircleIconNum';
 import Textarea from './Textarea/Textarea';
 import { RiImageAddFill } from 'react-icons/ri';
 import Tags from '../../Components/Tags/Tags';
+import Footer from '../../Components/Footer/Footer';
 export const homeContext = createContext();
+
+const SmallCardSmList = [
+  {
+    icon: 'communication.png',
+    text: 'DIFFUSION SMS',
+  },
+  {
+    icon: 'website_x5F_alert.png',
+    text: 'DEVELOPPEMENT WEB',
+  },
+  {
+    icon: 'image33(Traced).png',
+    text: 'SPONSORING FACEBOOK',
+  },
+  {
+    icon: 'vector_x5F_design.png',
+    text: 'VISUEL PUBLICITAIRE',
+  },
+  {
+    icon: 'graphic_x5F_file.png',
+    text: 'UI/UX DESIGN',
+  },
+];
+
+const iconsSocial = [
+  {
+    icon: 'bxl-whatsapp.svg.png',
+    link: '',
+  },
+  {
+    icon: 'bx-user.svg.png',
+    link: '',
+  },
+  {
+    icon: 'bx-message-detail.svg.png',
+    link: '',
+  },
+  {
+    icon: 'bx-image-add.svg.png',
+    link: '',
+  },
+  {
+    icon: 'bxs-send.svg.png',
+    link: '',
+  },
+];
+
+const partners = [
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+  {
+    img: 'bx-image-alt.svg.png',
+    link: '',
+    name: 'Partner #',
+  },
+];
+
 const Home = () => {
   const [broadcastFormState, setBroadcastFormState] = useState({
     peoples: 1,
@@ -87,7 +168,7 @@ const Home = () => {
             <img src="img4.svg" alt="img4" />
           </div>
           <div className="right">
-            <img src='img6.svg' alt='img6'/>
+            <img src="img6.svg" alt="img6" />
             <p>{data.home.third.text}</p>
           </div>
           <Tags
@@ -126,17 +207,76 @@ const Home = () => {
             x={'1000px'}
             y={'300px'}
           />
-          <img className='cotes' src='img5.svg' alt='cotes' />
+          <img className="cotes" src="img5.svg" alt="cotes" />
         </div>
 
-        <div className="fourth">
-          <div className="left"></div>
-          <div className="right">
-            <img src='img7.svg' alt='img7'/>
+        <div className="home-fourth">
+          <p>
+            Paps’diff as a <span>service</span>..s
+          </p>
+          <div>
+            <div className="left">
+              {SmallCardSmList.map((el, i) => {
+                return <SmallCardSm key={i} logo={el.icon} text={el.text} />;
+              })}
+            </div>
+            <div className="right">
+              <img src="img7.svg" className="backIm" alt="img7" />
+              <button>
+                <img src="image156.png" />
+                <p>Tous les services</p>
+              </button>
+            </div>
           </div>
         </div>
+
+        <div className="home-fifth">
+          <p>La solution c’est Paps’diff.</p>
+          <p>
+            Vos diffusions deviennent <span>simples</span>
+          </p>
+          <div>
+            {iconsSocial.map((el, i) => {
+              return (
+                <button key={i}>
+                  <img src={el.icon} />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="home-sixth">
+          <p>
+            Comme on dit souvent chez nous: “Mieux vaut tard que plus tard”. Profitez dès maintenant de nos services de diffusion sur
+            WhatsApp.
+          </p>
+          <button>Diffuser Maintenant</button>
+          <img src={'image157.png'} />
+        </div>
+
+        <div className="home-seventh">
+          {partners.map((el, i) => {
+            return (
+              <div key={i}>
+                <img src={el.img} />
+                <p>{el.name}</p>
+              </div>
+            );
+          })}
+        </div>
+        <Footer />
       </div>
     </homeContext.Provider>
+  );
+};
+
+const SmallCardSm = ({ logo, text }) => {
+  return (
+    <div className="small-card-sm">
+      <img src={logo} />
+      <p>{text}</p>
+    </div>
   );
 };
 
