@@ -1,0 +1,36 @@
+.left > div{
+    display: flex;
+    flex-flow: column;
+    width: 17%;
+
+}
+.left > div:nth-child(1) > span:nth-child(1){ 
+    color: #0F9D58;
+    font-size: 30px;
+    font-weight: 400;
+}
+.left > div:nth-child(1) >  span:nth-child(2){ 
+    color: #FF5D00;
+    font-size: 30px;
+    font-weight: 400;
+}
+.left > div:nth-child(1) > p{ 
+    font-weight: 200;
+}
+.left > div:nth-child(1)  >p {
+    word-spacing: 10px;
+    margin: 20px 0 0 0;
+    color: #0F9D58;
+}
+.left > div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    word-spacing: 15px;
+    font-weight: 200;
+    color: #0F9D58;
+
+    span:nth-child(1){
+        font-weight: 400;
+    }
+}

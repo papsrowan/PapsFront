@@ -6,6 +6,7 @@ import Register from './Pages/Register/Register';
 // import Login from './Pages/Login/Login';
 import About from './Pages/About/About'
 import Service from './Pages/Service/Service'
+import BroadCast from './Pages/Broadcast/BroadCast';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/login' element = {<Register login={true}/>}/>
         <Route path='/about' element = {<About />} />
         <Route path='/service' element = {<Service />}/>
+        <Route path='/broadcast' element = {<BroadCast />}/>
       </Routes>
     </Router>
   );
