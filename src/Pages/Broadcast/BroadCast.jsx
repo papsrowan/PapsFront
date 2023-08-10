@@ -86,6 +86,7 @@ const BroadCast = () => {
                 <div>
                   <img src="Group390.png" alt="" />
                   <p>Hommes</p>
+                  gbhjb
                 </div>
                 <div>
                   <img src="Group388.png" alt="" />
