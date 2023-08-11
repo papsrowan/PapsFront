@@ -6,7 +6,7 @@ import './style.scss';
 import Bouton from './Bouton/Bouton';
 const NavBar = () => {
   return (
-    <nav className="main-nav-bar">
+    <nav className="main-nav-bar" id='up'>
       <div className="left-nav-bar">
         <FormatedLogo text1={"PAPS'"} text2={'DIFF'} color1={'#0F9D58'} color2={'#FF5D00'} fontSize={'25px'} />
       </div>

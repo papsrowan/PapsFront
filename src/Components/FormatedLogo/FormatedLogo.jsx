@@ -3,7 +3,12 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   font-size: ${({ fontSize }) => fontSize};
-  font-weight: 700;
+  font-weight: ${'bold'};
+@font-face {
+    font-family: ${'Poppins'};
+    src: url(${'../../Fonts/Poppins/Poppins-Bold.ttf'}) format(${'truetype'});
+}
+ font-family: 'Poppins';
 
   .formated-logo-first {
     color: ${({ color1 }) => {

@@ -1,6 +1,5 @@
 .nav-link {
   color: #006735;
-  font-weight: 300;
   text-decoration: none;
 }
 %button {
@@ -36,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 15px 0;
 }
 .left-nav-bar{
     display: flex;

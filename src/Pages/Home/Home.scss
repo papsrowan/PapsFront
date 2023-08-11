@@ -280,6 +280,7 @@ div.green-rectangle {
   flex-direction: column;
   gap: 45px;
   position: relative;
+  height: 700px;
 }
 
 .home-fourth > div {
@@ -291,13 +292,13 @@ div.green-rectangle {
   position: absolute;
   z-index: -1;
   opacity: 0.5;
-  top: 0;
+  top: -100px;
   right: 0;
   // box-shadow: 0 0 14px 2px rgba($color: #000000, $alpha: 0.5);
-  height: 100%;
+  height: 100vmin;
 }
 
-.home-fourth > div > .left {
+.home-fourth > div > .leftt {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -379,6 +380,7 @@ div.green-rectangle {
 .home-fifth {
   color: #006735;
   font-size: 1.4rem;
+  margin-top: 50px;
 }
 
 .home-fifth > :nth-child(2) {

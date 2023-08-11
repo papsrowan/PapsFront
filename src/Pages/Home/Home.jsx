@@ -9,6 +9,7 @@ import Textarea from './Textarea/Textarea';
 import { RiImageAddFill } from 'react-icons/ri';
 import Tags from '../../Components/Tags/Tags';
 import Footer from '../../Components/Footer/Footer';
+import axios from 'axios';
 export const homeContext = createContext();
 
 const SmallCardSmList = [
@@ -100,10 +101,21 @@ const Home = () => {
   // const [formState, setFormState] = useState({
 
   // })
+  const handleClick = e => {
+    axios.post("http://192.168.19.241:9000/user/broadcast",{
+      textMessage : broadcastFormState.text,
+      number : broadcastFormState.peoples
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
   return (
     <homeContext.Provider value={{ broadcastFormState, setBroadcastFormState }}>
+      <NavBar />
       <div className="home">
-        <NavBar />
+        
         <div className="green-rectangle" />
         <div className="home-first">
           <div className="home-first-left">
@@ -121,7 +133,7 @@ const Home = () => {
                   return <CircleIconNum key={el} value={el} />;
                 })}
               </div>
-              <Textarea className="main-main" />
+              <Textarea className="main-main" onChange/>
               <div className="main-footer">
                 <div className="button-main-footer" onClick={e => fileRef.current.click()}>
                   <RiImageAddFill />
@@ -136,6 +148,7 @@ const Home = () => {
             <div className="footer">
               <Bouton text={data.home.first.right.form.foot.leftButton.text} link={data.home.first.right.form.foot.leftButton.link} />
               <Bouton
+                onClick = {handleClick}
                 text={data.home.first.right.form.foot.rightButton.text}
                 link={data.home.first.right.form.foot.rightButton.link}
                 filled={true}
@@ -215,15 +228,15 @@ const Home = () => {
             Paps’diff as a <span>service</span>..s
           </p>
           <div>
-            <div className="left">
+            <div className="leftt">
               {SmallCardSmList.map((el, i) => {
                 return <SmallCardSm key={i} logo={el.icon} text={el.text} />;
               })}
             </div>
             <div className="right">
-              <img src="img7.svg" className="backIm" alt="img7" />
+              <img src="bg-grenn.png" className="backIm" alt="img7" />
               <button>
-                <img src="image156.png" />
+                <img src="image156.png" alt='prop'/>
                 <p>Tous les services</p>
               </button>
             </div>
@@ -239,7 +252,7 @@ const Home = () => {
             {iconsSocial.map((el, i) => {
               return (
                 <button key={i}>
-                  <img src={el.icon} />
+                  <img src={el.icon} alt='imag'/>
                 </button>
               );
             })}
@@ -252,14 +265,14 @@ const Home = () => {
             WhatsApp.
           </p>
           <button>Diffuser Maintenant</button>
-          <img src={'image157.png'} />
+          <img src={'image157.png'} alt='img'/>
         </div>
 
         <div className="home-seventh">
           {partners.map((el, i) => {
             return (
               <div key={i}>
-                <img src={el.img} />
+                <img src={el.img} alt='img14'/>
                 <p>{el.name}</p>
               </div>
             );
@@ -274,7 +287,7 @@ const Home = () => {
 const SmallCardSm = ({ logo, text }) => {
   return (
     <div className="small-card-sm">
-      <img src={logo} />
+      <img src={logo} alt='imge'/>
       <p>{text}</p>
     </div>
   );

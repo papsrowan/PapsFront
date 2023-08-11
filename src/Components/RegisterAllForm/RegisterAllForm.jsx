@@ -11,6 +11,7 @@ import { data } from '../../Languages/French/Data';
 import RegisterNavBar from './RegisterNavBar/RegisterNavBar';
 import RegisterForm from './RegisterForm/RegisterForm';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export const RegisterContext = createContext(null);
 
@@ -50,6 +51,19 @@ const RegisterAllForm = ({ login }) => {
     e.preventDefault();
 
     //verification to implement here
+    if(login){
+      if(formState)
+      axios.post('http://192.168.19.241:9000/user/login',{
+        email : formState.email,
+        password : formState.password
+      }).then(res => {
+
+      }).catch(err => {
+        console.log(err)
+      })
+    }else{
+
+    }
     console.log(formState);
   };
 
